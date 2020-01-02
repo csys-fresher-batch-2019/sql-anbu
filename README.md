@@ -17,6 +17,7 @@ INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('AUSI','Texas','United States')
 | AUSI       | Texas      | United States |
 
 ```
+```SQL
 CREATE TABLE AIRPORT
 (AP_NAME VARCHAR2(100) NOT NULL,
 STATE VARCHAR2(15), 
@@ -28,9 +29,12 @@ FOREIGN KEY(CNAME) REFERENCES CITY(CNAME) ON DELETE CASCADE);
 INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Los International Airport','Kent','United States','Los');
 INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Chandigarh International Airport','Chandigarh','India','Chandigarh');
 INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Dk International Airport','Texas','United States','Aus');
-
-
-
+| AP_NAME                          | STATE      | COUNTRY       | CNAME      |
+|----------------------------------|------------|---------------|------------|
+| Los International Airport        | Kent       | United States | Los        |
+| Chandigarh International Airport | Chandigarh | India         | Chandigarh |
+| Dk International Airport         | Texas      | United States | Aus        |
+```
 
 
 
