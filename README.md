@@ -8,7 +8,7 @@ PRIMARY KEY(CNAME));
 INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES('LoS','Kent','United States');
 INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('Chandigarh','Chandigarh','India');
 INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('AUSI','Texas','United States');
-
+```
 
 | CNAME      | STATE      | COUNTRY       |
 |------------|------------|---------------|
@@ -16,7 +16,7 @@ INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('AUSI','Texas','United States')
 | Chandigarh | Chandigarh | India         |
 | AUSI       | Texas      | United States |
 
-```
+
 ```SQL
 CREATE TABLE AIRPORT
 (AP_NAME VARCHAR2(100) NOT NULL,
@@ -29,12 +29,13 @@ FOREIGN KEY(CNAME) REFERENCES CITY(CNAME) ON DELETE CASCADE);
 INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Los International Airport','Kent','United States','Los');
 INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Chandigarh International Airport','Chandigarh','India','Chandigarh');
 INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Dk International Airport','Texas','United States','Aus');
+```
 | AP_NAME                          | STATE      | COUNTRY       | CNAME      |
 |----------------------------------|------------|---------------|------------|
 | Los International Airport        | Kent       | United States | Los        |
 | Chandigarh International Airport | Chandigarh | India         | Chandigarh |
 | Dk International Airport         | Texas      | United States | Aus        |
-```
+
 
 ```SQL
 
@@ -47,13 +48,13 @@ PRIMARY KEY(AIRLINEID));
 INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('AA','American Airlines','001');
 INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('AI','Air India','098');
 INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('LH','Kf', '220');
-
+```
 | AIRLINEID | AL_NAME           | THREE_DIGIT_CODE |
 |-----------|-------------------|------------------|
 | AA        | American Airlines | 001              |
 | AI        | Air India         | 098              |
 | LH        | Kf                | 220              |
-```
+
 
 
 ```SQL
@@ -77,13 +78,13 @@ VALUES('B9876541','ALEN','V','SMITH','3456 NORTH, INDIA',8080367280,26,'F');
 
 INSERT INTO PASSENGER(PASSPORTNO,FNAME,M,LNAME,ADDRESS,PHONE,AGE,SEX)
 VALUES('C2345698','ALEN','A','SMITH','7820 NORTH, OH',8082267280,30,'F');
-
+```
 | PASSPORTNO | FNAME | M | LNAME | ADDRESS           | PHONE      | AGE | SEX |
 |------------|-------|---|-------|-------------------|------------|-----|-----|
 | A1234568   | ALEN  | M | SMITH |  2230 NORTH, NY   | 8080367290 | 30  | M   |
 | B9876541   | ALEN  | V | SMITH | 3456 NORTH, INDIA | 8080367280 | 26  | F   |
 | C2345698   | ALEN  | A | SMITH | 7820 NORTH, OH    | 8082267280 | 30  | F   |
-```
+
 ```SQL
 CREATE TABLE TICKET
 (DATE_OF_BOOKING DATE NOT NULL,
@@ -101,7 +102,7 @@ VALUES('11-JUN-16','JFK','BOM','ECONOMY',100000);
 
 INSERT INTO TICKET(DATE_OF_BOOKING, SOURCE, DESTINATION, CLASS, PRICE) 
 VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
-
+```
 | DATE_OF_BOOKING | SOURCE | DESTINATION | CLASS    | PRICE  |
 |-----------------|--------|-------------|----------|--------|
 | 11-MAY-16       | BOM    | DFW         | ECONOMY  | 95000  |
