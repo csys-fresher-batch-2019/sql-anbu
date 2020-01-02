@@ -36,7 +36,7 @@ INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Dk International Ai
 | Dk International Airport         | Texas      | United States | Aus        |
 ```
 
-
+```SQL
 
 CREATE TABLE AIRLINE
 (AIRLINEID VARCHAR(3) NOT NULL,
@@ -48,6 +48,15 @@ INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('AA','American
 INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('AI','Air India','098');
 INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('LH','Kf', '220');
 
+| AIRLINEID | AL_NAME           | THREE_DIGIT_CODE |
+|-----------|-------------------|------------------|
+| AA        | American Airlines | 001              |
+| AI        | Air India         | 098              |
+| LH        | Kf                | 220              |
+```
+
+
+```SQL
 
 CREATE TABLE PASSENGER
 (PASSPORTNO VARCHAR(10) NOT NULL,
@@ -69,7 +78,13 @@ VALUES('B9876541','ALEN','V','SMITH','3456 NORTH, INDIA',8080367280,26,'F');
 INSERT INTO PASSENGER(PASSPORTNO,FNAME,M,LNAME,ADDRESS,PHONE,AGE,SEX)
 VALUES('C2345698','ALEN','A','SMITH','7820 NORTH, OH',8082267280,30,'F');
 
-
+| PASSPORTNO | FNAME | M | LNAME | ADDRESS           | PHONE      | AGE | SEX |
+|------------|-------|---|-------|-------------------|------------|-----|-----|
+| A1234568   | ALEN  | M | SMITH |  2230 NORTH, NY   | 8080367290 | 30  | M   |
+| B9876541   | ALEN  | V | SMITH | 3456 NORTH, INDIA | 8080367280 | 26  | F   |
+| C2345698   | ALEN  | A | SMITH | 7820 NORTH, OH    | 8082267280 | 30  | F   |
+```
+```SQL
 CREATE TABLE TICKET
 (DATE_OF_BOOKING DATE NOT NULL,
 SOURCE VARCHAR(3) NOT NULL,
@@ -86,6 +101,15 @@ VALUES('11-JUN-16','JFK','BOM','ECONOMY',100000);
 
 INSERT INTO TICKET(DATE_OF_BOOKING, SOURCE, DESTINATION, CLASS, PRICE) 
 VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
+
+| DATE_OF_BOOKING | SOURCE | DESTINATION | CLASS    | PRICE  |
+|-----------------|--------|-------------|----------|--------|
+| 11-MAY-16       | BOM    | DFW         | ECONOMY  | 95000  |
+| 11-JUN-16       | JFK    | BOM         | BUSINESS | 100000 |
+| 21-AUG-16       | IAH    | DEL         | BUSINESS | 200000 |
+
+
+
 
 SELECT *FROM CITY,AIRPORT,AIRLINE,PASSENGER,TICKET;/
 
