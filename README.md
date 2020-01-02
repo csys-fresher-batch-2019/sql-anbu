@@ -1,4 +1,8 @@
+# AIRLINE MANAGEMENT SYSTEM
+
+## CITY INFO
 ```SQL
+
 CREATE TABLE CITY
 (CNAME VARCHAR2(15) NOT NULL,
 STATE VARCHAR2(15), 
@@ -16,7 +20,7 @@ INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('AUSI','Texas','United States')
 | Chandigarh | Chandigarh | India         |
 | AUSI       | Texas      | United States |
 
-
+## AIRPORT INFO
 ```SQL
 CREATE TABLE AIRPORT
 (AP_NAME VARCHAR2(100) NOT NULL,
@@ -36,7 +40,7 @@ INSERT INTO AIRPORT (AP_NAME, STATE, COUNTRY, CNAME) VALUES('Dk International Ai
 | Chandigarh International Airport | Chandigarh | India         | Chandigarh |
 | Dk International Airport         | Texas      | United States | Aus        |
 
-
+## AIRLINE INFO
 ```SQL
 
 CREATE TABLE AIRLINE
@@ -56,7 +60,7 @@ INSERT INTO AIRLINE (AIRLINEID, AL_NAME, THREE_DIGIT_CODE) VALUES('LH','Kf', '22
 | LH        | Kf                | 220              |
 
 
-
+## PASSENGER INFO
 ```SQL
 
 CREATE TABLE PASSENGER
@@ -84,6 +88,8 @@ VALUES('C2345698','ALEN','A','SMITH','7820 NORTH, OH',8082267280,30,'F');
 | A1234568   | ALEN  | M | SMITH |  2230 NORTH, NY   | 8080367290 | 30  | M   |
 | B9876541   | ALEN  | V | SMITH | 3456 NORTH, INDIA | 8080367280 | 26  | F   |
 | C2345698   | ALEN  | A | SMITH | 7820 NORTH, OH    | 8082267280 | 30  | F   |
+
+## TICKET INFO
 
 ```SQL
 CREATE TABLE TICKET
