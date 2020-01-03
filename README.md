@@ -152,7 +152,7 @@ VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
 | 12347      | 1004 |     1           |
 | 12348      | 1003 |     1           |
 ```
-### seat availability
+### SEAT AVAILABILITY 
 
 ```sql
 create table seat_availability(bus_id number not null,
