@@ -9,16 +9,16 @@ STATE VARCHAR2(15),
 COUNTRY VARCHAR(30),
 PRIMARY KEY(CNAME));
 -- Insering values
-INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES('LoS','Kent','United States');
-INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('Chandigarh','Chandigarh','India');
-INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('AUSI','Texas','United States');
+INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES('ALEN','Kent','United States');
+INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('ALEN','Chandigarh','India');
+INSERT INTO CITY (CNAME, STATE, COUNTRY) VALUES ('ALEN','Texas','United States');
 ```
 
 | CNAME      | STATE      | COUNTRY       |
 |------------|------------|---------------|
-| LoS        | Kent       | United States |
-| Chandigarh | Chandigarh | India         |
-| AUSI       | Texas      | United States |
+| ALEN       | Kent       | United States |
+| ALEN       | TAMILNADU  |  INDIA        |
+| ALEN       | Texas      | United States |
 
 ## AIRPORT INFO
 ```SQL
