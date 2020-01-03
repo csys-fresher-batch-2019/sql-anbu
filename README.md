@@ -118,5 +118,36 @@ VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
 
 
 
-SELECT *FROM CITY,AIRPORT,AIRLINE,PASSENGER,TICKET;
+ ## Feature 4:Reservation Information
+   ``` sql
+       
+   create table reservation_info(ticket_num number,
+                                 p_id number not null,
+                                 no_of_tickets number not null,
+                                 constraint check_no_tickets check(no_of_tickets>0),
+                                 constraint primary_key_tic_num primary key(ticket_num),
+                                 constraint foreign_key_p_id foreign key(p_id) references passenger_info(p_id)
+                                 );
+                                 
+                      
+                      insert into reservation_info values(12345,1002,,1);                     
+                      insert into reservation_info values(12346,1001,1);                     
+                      insert into reservation_info values(12347,1004,1);                     
+                      insert into reservation_info values(12348,1003,1);
+                      
+                      
+                      select * from reservation_info;
+                      
+   
+   ```
+   
+   
+ ## Reservation_Info 
+   
+| ticket_num | p_id |  |no_of_tickets |
+|------------|------|-----------------|
+| 12345      | 1002 |     1           |
+| 12346      | 1001 |     1           |
+| 12347      | 1004 |     1           |
+| 12348      | 1003 |     1           |
 
