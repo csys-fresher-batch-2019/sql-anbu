@@ -141,15 +141,49 @@ VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
    
    ```
    
-   ```sql
+  
  ## Reservation_Info 
-   
+ 
+   ```sql
 | ticket_num | p_id |  |no_of_tickets |
 |------------|------|-----------------|
 | 12345      | 1002 |     1           |
 | 12346      | 1001 |     1           |
 | 12347      | 1004 |     1           |
 | 12348      | 1003 |     1           |
+```
+### seat availability
+
+```sql
+create table seat_availability(bus_id number not null,
+                                        available_seats number not null,
+                                        constraint foreign_k_bus_id foreign key(flight_id) references flight_info (flight_id),
+                                        constraint check_no_of_seats check(available_seats>=0)
+                                        );
+                                        
+                         insert into seat_availability values(100,49);
+                         insert into seat_availability values(101,39); 
+                         insert into seat_availability values(102,39);
+                         insert into seat_availability values(103,44); 
+                         insert into seat_availability values(104,50);
+                         
+                          select * from seat_availability;
+                        
+   
+| flight_id | available_seats |
+|-----------|-----------------|
+| 100       | 49              |
+| 101       | 39              |
+| 102       | 39              |
+| 103       | 44              |
+| 104       | 50              |
 
 ```
+
+
+
+
+
+
+
 
