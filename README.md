@@ -141,7 +141,7 @@ VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
    
    ```
    
-   
+   ```sql
  ## Reservation_Info 
    
 | ticket_num | p_id |  |no_of_tickets |
@@ -150,4 +150,6 @@ VALUES('21-AUG-16','IAH','DEL','BUSINESS',200000);
 | 12346      | 1001 |     1           |
 | 12347      | 1004 |     1           |
 | 12348      | 1003 |     1           |
+
+```
 
